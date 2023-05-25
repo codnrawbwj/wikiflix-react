@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import "./App.css"
 
 const myAPI = 'edcc968e';
 const API_URL = 'http://www.omdbapi.com/?apikey=' + myAPI;
@@ -15,10 +16,22 @@ const App = () => {
 
     useEffect(() => {
         searchMovie('Guardians of the Galaxy');
-    },[])
+    },[]);
 
     return (
-        <h1>App</h1>
+        <>
+            <div className='header'>
+                <h1>Wiki-Flix</h1>
+            </div>
+            <div className='searchBox'>
+                <input 
+                    type='text' 
+                    placeholder='Search for titles'
+                    value=""
+                    onChange={()=>{}}>
+                </input>
+            </div>
+        </>
     )
 }
 
